@@ -1,4 +1,7 @@
 import "./styles.css";
+import { projects } from "./projects"
 
 
-console.log("hi");
+document.addEventListener("DOMContentLoaded", () => {
+  projects()
+});

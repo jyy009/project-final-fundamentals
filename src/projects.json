@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Restaurant page",
+    "tech": "Javascrip, HTML, CSS",
+    "author": "Hui Chen",
+    "imageUrl": "path/to/image.jpg",
+    "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
+    "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
+    "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack"
+  },
+  {
+    "title": "Restaurant page",
+    "tech": "Javascrip, HTML, CSS",
+    "author": "Ji",
+    "imageUrl": "path/to/image.jpg",
+    "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
+    "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
+    "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack"
+  },
+  {
+    "title": "Restaurant page",
+    "tech": "Javascrip, HTML, CSS",
+    "author": "Joseph",
+    "imageUrl": "path/to/image.jpg",
+    "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
+    "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
+    "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack"
+  },
+  {
+    "title": "Restaurant page",
+    "tech": "Javascrip, HTML, CSS",
+    "author": "Yu",
+    "imageUrl": "path/to/image.jpg",
+    "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
+    "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
+    "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack"
+  }
+]
