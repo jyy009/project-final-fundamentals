@@ -1,3 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'GrandSlang-Roman'; 
+  src: url('./fonts/GrandSlang-Roman.woff2') format('woff2');
+  font-weight: normal; 
+  font-style: normal;  
+}
+
+:root{
+  --color-background:rgb(233,227,221);
+  --color-font:rgb(26,24,24);
+  --font-title: 'GrandSlang-Roman', cursive, sans-serif;
+  --font-body:'Montserrat', sans-serif;
+}
+
 body {
-  background-color: rgb(103, 96, 164);
+  background-color:var(--color-background);
+  font-family: var(--font-body);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  gap: 3%;
+  margin-left: 5%;
+}
+
+nav li {
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color:var(--font-body);
+  font-family: inherit;
+  
+}
+
+nav a:hover {
+  color: rgb(239	171	144	); 
+  text-decoration: underline;
+}
+
+.info-and-nav-container{
+  display: flex;
+  gap:10rem;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  font-family:var(--font-body);
+  margin-top: 7%;
+  margin-left: 7%;
+
+  .studio-name{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5em;
+  }
+}
+
+
+.nav-link-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  height: 100vh;
+  margin-right: 5%;
+  a{
+    text-decoration:none;
+    color: var(--color-font);
+    font-family: var(--font-title);
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 11vw;
+    font-weight: 300;
+    line-height: .95em;
+    display: inline-block; 
+    transition: transform 0.5s ease;
+  }
+}
+
+.nav-link-container a:hover{
+  color: rgb(239	171	144	); 
+  font-style: italic;
+  transform: translateX(3px); 
 }
