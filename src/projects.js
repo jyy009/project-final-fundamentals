@@ -32,12 +32,12 @@ export const projects = () => {
       const projectTitle =
         cloneProjectsLinkTemplate.querySelector(".projs-title");
       projectTitle.textContent = proj.title;
-      projectTitle.style.textTransform = "uppercase"
+      projectTitle.style.textTransform = "uppercase";
 
       const projectAuthor =
         cloneProjectsLinkTemplate.querySelector(".projs-author");
       projectAuthor.textContent = `- ${proj.author}`;
-      projectAuthor.style.textTransform = "uppercase"
+      projectAuthor.style.textTransform = "uppercase";
 
       projectLink.addEventListener("click", (event) => {
         event.preventDefault();
@@ -51,8 +51,6 @@ export const projects = () => {
           console.log(typeof projectId);
           singleProject(projectId);
         }
-
-        
       });
       projectsSection.appendChild(cloneProjectsLinkTemplate);
     });
