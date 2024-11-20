@@ -13,12 +13,22 @@ export const projects = () => {
   projectsSection.appendChild(cloneProjectsInfoTemplate);
 
   const renderProject = () => {
-    const projectsLinkTemplate = document.getElementById("projects-link-template")
+    const projectsLinkTemplate = document.getElementById(
+      "projects-link-template"
+    );
 
     projectsJson.forEach((proj) => {
       const cloneProjectsLinkTemplate =
         projectsLinkTemplate.content.cloneNode(true);
 
+      const projectsLinkWrapper = cloneProjectsLinkTemplate.querySelector(
+        ".projects-link-wrapper"
+      );
+
+      // const singleProjWrapper = cloneProjectsLinkTemplate.querySelector(
+      //   ".single-project-wrapper"
+      // );
+      // singleProjWrapper.innerHTML = "";
       const projectLink =
         cloneProjectsLinkTemplate.querySelector(".projects-link");
       projectLink.dataset.id = proj.id;
@@ -31,26 +41,21 @@ export const projects = () => {
         cloneProjectsLinkTemplate.querySelector(".projs-author");
       projectAuthor.textContent = `- ${proj.author}`;
 
+      projectsLinkWrapper.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const link = event.target.closest(".projects-link");
+        console.log("link from click", link);
+
+        if (link) {
+          const projectId = link.dataset.id;
+          console.log("id from link dataset", projectId);
+          console.log(typeof projectId);
+          singleProject(projectId);
+        }
+      });
       projectsSection.appendChild(cloneProjectsLinkTemplate);
     });
-
-
-    projectsSection.addEventListener("click", (event) => {
-      event.preventDefault()
-      const link = event.target.closest('.projects-link')
-      console.log("link from click", link)
-      
-      const projectsLinkWrapper = document.querySelector(".projects-link-wrapper")
-
-      if (link) {
-        const projectId = link.dataset.id
-        console.log("id from link dataset", projectId)
-        console.log(typeof(projectId))
-      
-        singleProject(projectId)
-      }
-    })
-
   };
 
   renderProject();

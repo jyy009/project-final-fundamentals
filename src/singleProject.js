@@ -2,47 +2,55 @@ import projectsJson from "./projects.json";
 
 export const singleProject = (projectId) => {
   console.log("ProjectId received:", projectId);
+
   const project = projectsJson.find((proj) => proj.id === projectId);
   console.log(project);
 
   if (project) {
-    const clickedProjectLink = document.querySelector(`.projects-link[data-id = "${projectId}"]`)
-    console.log("clicked project link:", clickedProjectLink)
-
-  
-    const projectsLinkWrapper = clickedProjectLink.closest(".projects-link-wrapper")
-     const nextSib = projectsLinkWrapper.nextSibling
-        nextSib.textContent = ""
-
-
-    const singleProjectTemplate = document.getElementById("single-project-template");
-    const cloneSingleProjectTemplate =
-      singleProjectTemplate.content.cloneNode(true);
-
-    const singleDescription = cloneSingleProjectTemplate.querySelector(
-      ".single-description"
+    const clickedProjectLink = document.querySelector(
+      `.projects-link[data-id = "${projectId}"]`
     );
-    singleDescription.textContent = project.description;
+    console.log("clicked project link:", clickedProjectLink);
 
-    const techList = cloneSingleProjectTemplate.querySelector(".single-tech");
-    techList.textContent = project.tech;
+    //check if details container exists
+     let detailsContainer = clickedProjectLink.nextSibling
+     console.log("next sibling of link:", detailsContainer)
 
-    const gitLink = cloneSingleProjectTemplate.querySelector(".git-link");
-    gitLink.href = project.gitUrl
+     while (detailsContainer && detailsContainer.nodeType !== Node.ELEMENT_NODE) {
+      detailsContainer = detailsContainer.nextSibling;
+    }
 
-    const liveLink = cloneSingleProjectTemplate.querySelector(".live-link")
-    liveLink.href = project.liveUrl
+    if (detailsContainer && detailsContainer.classList.contains("proj-details-container")) {
+      detailsContainer.remove()
 
+    } else {
 
-    // const nextSibling = clickedProjectLink.nextElementSibling
-    // console.log(nextSibling)
+    const projDetailsTemplate = document.getElementById(
+      "proj-details-template"
+    );
+    const cloneProjDetailsTemplate =
+      projDetailsTemplate.content.cloneNode(true);
 
-    // clickedProjectLink.parentNode.insertBefore(cloneSingleProjectTemplate, clickedProjectLink.nextSibling);
+    const projDescription =
+      cloneProjDetailsTemplate.querySelector(".proj-description");
+    projDescription.textContent = project.description;
 
-    const detailsContainer = document.createElement('div');
-    detailsContainer.classList.add('single-project-details');
-    detailsContainer.appendChild(cloneSingleProjectTemplate);
+    const projTech = cloneProjDetailsTemplate.querySelector(".proj-tech");
+    projTech.textContent = project.tech;
 
-    projectsLinkWrapper.insertAdjacentElement("afterend",detailsContainer)
+    const projGit = cloneProjDetailsTemplate.querySelector(".proj-git");
+    projGit.href = project.gitUrl;
+
+    const projLive = cloneProjDetailsTemplate.querySelector(".proj-live");
+    projLive.href = project.liveUrl;
+
+    const detailsContainer = document.createElement("div");
+    detailsContainer.classList.add("proj-details-container");
+    detailsContainer.appendChild(cloneProjDetailsTemplate);
+
+    const parentNode = clickedProjectLink.parentNode;
+    parentNode.insertBefore(detailsContainer, clickedProjectLink.nextSibling);
+  }
+
   }
 };
