@@ -12,6 +12,10 @@ export const projects = () => {
     projectsInfoTemplate.content.cloneNode(true);
   projectsSection.appendChild(cloneProjectsInfoTemplate);
 
+  const projectsInfoWrapper = document.querySelector(".projects-info-wrapper");
+  const h2 = projectsInfoWrapper.querySelector("h2");
+  h2.style.textTransform = "uppercase";
+
   const renderProject = () => {
     const projectsLinkTemplate = document.getElementById(
       "projects-link-template"
@@ -21,14 +25,6 @@ export const projects = () => {
       const cloneProjectsLinkTemplate =
         projectsLinkTemplate.content.cloneNode(true);
 
-      const projectsLinkWrapper = cloneProjectsLinkTemplate.querySelector(
-        ".projects-link-wrapper"
-      );
-
-      // const singleProjWrapper = cloneProjectsLinkTemplate.querySelector(
-      //   ".single-project-wrapper"
-      // );
-      // singleProjWrapper.innerHTML = "";
       const projectLink =
         cloneProjectsLinkTemplate.querySelector(".projects-link");
       projectLink.dataset.id = proj.id;
@@ -36,12 +32,14 @@ export const projects = () => {
       const projectTitle =
         cloneProjectsLinkTemplate.querySelector(".projs-title");
       projectTitle.textContent = proj.title;
+      projectTitle.style.textTransform = "uppercase"
 
       const projectAuthor =
         cloneProjectsLinkTemplate.querySelector(".projs-author");
       projectAuthor.textContent = `- ${proj.author}`;
+      projectAuthor.style.textTransform = "uppercase"
 
-      projectsLinkWrapper.addEventListener("click", (event) => {
+      projectLink.addEventListener("click", (event) => {
         event.preventDefault();
 
         const link = event.target.closest(".projects-link");

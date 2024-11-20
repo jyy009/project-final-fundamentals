@@ -1,29 +1,26 @@
 [
   {
-    "title": "project title",
-    "tech": "Javascrip, HTML, CSS",
+    "title": "Trattoria da Vinci",
+    "tech": "Javascript, HTML, CSS",
     "author": "Hui Chen",
-    "imageUrl": "path/to/image.jpg",
     "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
     "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
     "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack",
     "id": "1"
   },
   {
-    "title": "Restaurant page",
-    "tech": "Javascrip, HTML, CSS",
-    "author": "Ji",
-    "imageUrl": "path/to/image.jpg",
-    "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
-    "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
+    "title": "Milestone",
+    "tech": "Javascript, HTML, CSS",
+    "author": "Ji Yoo",
+    "gitUrl": "https://github.com/jyy009/restaurant-page/tree/main",
+    "liveUrl": "https://jyy009.github.io/restaurant-page/",
     "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack",
     "id": "2"
   },
   {
     "title": "Restaurant page",
-    "tech": "Javascrip, HTML, CSS",
+    "tech": "Javascript, HTML, CSS",
     "author": "Joseph",
-    "imageUrl": "path/to/image.jpg",
     "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
     "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
     "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack",
@@ -31,9 +28,8 @@
   },
   {
     "title": "Restaurant page",
-    "tech": "Javascrip, HTML, CSS",
+    "tech": "Javascript, HTML, CSS",
     "author": "Yu",
-    "imageUrl": "path/to/image.jpg",
     "gitUrl": "https://github.com/huichen-hc/Restaurant-page",
     "liveUrl": "https://huichen-hc.github.io/Restaurant-page/ ",
     "description": "This project is to create a restaurant page by mainly using JavaScript and Webpack",

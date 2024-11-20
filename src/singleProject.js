@@ -37,12 +37,20 @@ export const singleProject = (projectId) => {
 
     const projTech = cloneProjDetailsTemplate.querySelector(".proj-tech");
     projTech.textContent = project.tech;
+    const techH4 = cloneProjDetailsTemplate.querySelector(".proj-tech-h4")
+    techH4.style.textTransform = "uppercase"
 
+    const urlH4 = cloneProjDetailsTemplate.querySelector('.proj-tech-url')
+    urlH4.style.textTransform = "uppercase";
+    
     const projGit = cloneProjDetailsTemplate.querySelector(".proj-git");
     projGit.href = project.gitUrl;
+    console.log("git link:", project.gitUrl)
 
     const projLive = cloneProjDetailsTemplate.querySelector(".proj-live");
     projLive.href = project.liveUrl;
+    console.log("live link:", project.liveUrl)
+
 
     const detailsContainer = document.createElement("div");
     detailsContainer.classList.add("proj-details-container");

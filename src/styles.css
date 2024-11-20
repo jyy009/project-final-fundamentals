@@ -4,10 +4,9 @@
   padding: 0;
 }
 
-:root {
-  --font-text: "Montserrat", serif;
-}
 
-* {
-  font-family: "Montserrat";
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

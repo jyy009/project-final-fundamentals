@@ -7,17 +7,20 @@
   </head>
   <body>
     <div id="page-container">
-      <div id="projects-section"></div>
+      <div id="projects-section" class="container"></div>
     </div>
     <!-- projects info TEMPLATE -->
     <template id="projects-info-template">
       <div class="projects-info-wrapper">
-        <h2>PROJECTS</h2>
+        <h2 class="info-h2">Projects</h2>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
-          temporibus iusto suscipit pariatur soluta placeat dicta! Aliquam unde
-          voluptate nesciunt, modi accusamus dolorum reiciendis adipisci amet
-          cumque aperiam suscipit illo.
+          Explore our curated collection of stunning websites crafted by
+          talented frontend developers, showcasing innovative designs and
+          seamless user experiences.
+        </p>
+        <p>
+          Discover the artistry and technical skill behind each project,
+          inspiring your next digital creation!
         </p>
       </div>
     </template>
@@ -34,16 +37,28 @@
 
     <!-- project page TEMPLATE -->
     <template id="proj-details-template">
-        <div class="proj-details-wrapper">
-          <h3 class="proj-description">description</h3>
-                <div>
-          <h4>Tech</h4>
-          <p class="proj-tech">tech list</p>
-                </div>
-          <a class="proj-git" href="#" target="_blank" rel="noopener noreferrer">View Code</a>
-          <a class="proj-live" href="#" target="_blank" rel="noopener noreferrer">View Live</a>
+      <div class="proj-details-wrapper">
+        <div>
+          <p class="proj-description">description</p>
         </div>
-
+        <div>
+          <h4 class="proj-tech-h4">Tech</h4>
+          <p class="proj-tech">tech list</p>
+        </div>
+        <div class="proj-url-wrapper">
+          <h4 class="proj-tech-url">URL</h4>
+          <a class="proj-git" href="#" target="_blank" rel="noopener noreferrer"
+            >Code</a
+          >
+          <a
+            class="proj-live"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Live</a
+          >
+        </div>
+      </div>
     </template>
   </body>
 </html>

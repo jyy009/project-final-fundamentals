@@ -1,9 +1,108 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@font-face {
+  font-family: "GrandSlang-Roman";
+  src: url("./fonts/GrandSlang-Roman.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
-  --font-header: "Montserrat", serif;
+  --font-text: "Montserrat", serif;
+  --font-header: "GrandSlang-Roman", cursive, sans-serif;
+  --color-beige: rgb(233, 227, 221);
+  --color-black: rgb(26, 24, 24);
+  --color-white: #ece7e1;
 }
 
-* {
-  font-family: "Montserrat";
+#page-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+
+  #projects-section {
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100%;
+
+    .projects-info-wrapper {
+      font-family: var(--font-text);
+      color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      line-height: 1.2rem;
+
+      h2 {
+        font-weight: 400;
+        font-size: 1rem;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 0.8rem;
+      }
+    }
+
+    .projects-link-wrapper {
+      font-family: var(--font-header);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .projects-link {
+        color: var(--color-white);
+        text-decoration: none;
+        font-size: 1.2rem;
+
+        .projs-author {
+          font-family: var(--font-text);
+          font-size: 0.7rem;
+        }
+      }
+
+      .proj-details-container {
+        font-family: var(--font-text);
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+
+        .proj-details-wrapper {
+          font-size: 0.8rem;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+          }
+
+          .proj-description {
+            font-family: var(--font-header);
+            font-weight: 300;
+            font-size: 1.2rem;
+          }
+          
+          .proj-url-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            a {
+              color: var(--color-white);
+              text-decoration: none;
+            }
+          }
+
+          .proj-tech-h4,
+          .proj-tech-url {
+            text-decoration: underline;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }
