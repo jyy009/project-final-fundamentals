@@ -71,7 +71,6 @@ body {
   font-weight: 300;
   line-height: 1em;
   position: relative;
-
 }
 
 h1 {
@@ -111,8 +110,9 @@ h1 {
 
 .quote {
   padding-bottom: 2%;
+  margin-top: 0;
   font-family: 'GrandSlang-Roman', sans-serif;
-  font-size: 46px;
+  font-size: 4vw;
   font-weight: 300;
   line-height: 1.3em;
   display: block;
@@ -146,9 +146,12 @@ h1 {
     max-width: 50%;
     margin: 0;
     padding: 10px;
+    line-height: 2em;
+    font-size: 1vw;
   }
   .head-image {
     max-width: 50%;
+    min-width: 50%;
     height: auto;
     border-radius: 15px;
     object-fit: cover;
@@ -166,10 +169,13 @@ h1 {
     order: 2;
     max-width: 50%;
     margin: 0;
+    font-size: 1vw;
     padding: 10px;
+    line-height: 2em;
   }
 
   .head-image {
+    min-width: 50%;
     max-width: 50%;
     height: auto;
     object-fit: cover;
