@@ -12,6 +12,7 @@
   --color-beige: rgb(233, 227, 221);
   --color-black: rgb(26, 24, 24);
   --color-white: #ece7e1;
+  --color-pink: #efab90;
 }
 
 #page-container {
@@ -25,6 +26,7 @@
     flex-direction: column;
     gap: 20px;
     min-height: 100%;
+    width: 100%;
 
     .projects-info-wrapper {
       font-family: var(--font-text);
@@ -33,6 +35,7 @@
       flex-direction: column;
       gap: 15px;
       line-height: 1.2rem;
+      padding-bottom: 30px;
 
       h2 {
         font-weight: 400;
@@ -49,17 +52,23 @@
       font-family: var(--font-header);
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
 
       .projects-link {
         color: var(--color-white);
         text-decoration: none;
         font-size: 1.2rem;
-
+        width: fit-content;
         .projs-author {
           font-family: var(--font-text);
           font-size: 0.7rem;
         }
+      }
+
+      .projects-link:hover {
+        color: var(--color-pink);
+        font-style: italic;
+        transition: font-style 0.1s ease-out;
       }
 
       .proj-details-container {
@@ -72,7 +81,8 @@
           font-size: 0.8rem;
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 30px;
+          padding-bottom: 20px;
 
           div {
             display: flex;
@@ -85,7 +95,7 @@
             font-weight: 300;
             font-size: 1.2rem;
           }
-          
+
           .proj-url-wrapper {
             display: flex;
             flex-direction: column;
@@ -103,6 +113,131 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #page-container #projects-section {
+    .projects-info-wrapper {
+      line-height: 1.5em;
+      h2 {
+        font-weight: 400;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #page-container #projects-section .projects-link-wrapper {
+    .projects-link {
+      .projs-title {
+        font-size: 4rem;
+        font-weight: 300;
+      }
+
+      .projs-author {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  #page-container
+    #projects-section
+    .projects-link-wrapper
+    .proj-details-container
+    .proj-details-wrapper {
+    .proj-description {
+      font-family: var(--font-header);
+      font-weight: 300;
+      font-size: 2rem;
+    }
+
+    .proj-tech-h4,
+    .proj-tech-url {
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .proj-tech {
+      font-size: 1rem;
+    }
+
+    .proj-git,
+    .proj-live {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #page-container #projects-section {
+    .projects-info-wrapper {
+      width: 70%;
+      line-height: 1.5em;
+      padding-bottom: 50px;
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  #page-container #projects-section .projects-link-wrapper {
+    .projects-link {
+      .projs-title {
+        font-size: 4.5rem;
+        font-weight: 300;
+      }
+
+      .projs-author {
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  #page-container
+    #projects-section
+    .projects-link-wrapper
+    .proj-details-container {
+    width: 50%;
+  }
+  #page-container
+    #projects-section
+    .projects-link-wrapper
+    .proj-details-container
+    .proj-details-wrapper {
+    .proj-description {
+      font-family: var(--font-header);
+      font-weight: 300;
+      font-size: 2.3rem;
+    }
+
+    .proj-tech-h4,
+    .proj-tech-url {
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    .proj-tech {
+      font-size: 1.3rem;
+    }
+
+    .proj-git,
+    .proj-live {
+      font-size: 1.3rem;
     }
   }
 }

@@ -51,6 +51,8 @@ export const projects = () => {
           console.log(typeof projectId);
           singleProject(projectId);
         }
+
+        
       });
       projectsSection.appendChild(cloneProjectsLinkTemplate);
     });
