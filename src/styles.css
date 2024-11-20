@@ -53,6 +53,15 @@ body {
   align-items: flex-start;
   display: flex;
 }
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.team-logo {
+  max-width: 50%;
+  height: auto;
+  margin-right: 20px; /* Adjust as needed */
+}
 .header-mask{
   margin-bottom: 2vh;
   padding-top: 5%;
@@ -115,4 +124,20 @@ h1 {
   font-weight: 300;
   line-height: 1.3em;
   display: block;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in {
+  animation: slideIn 2s ease-in-out;
 }
