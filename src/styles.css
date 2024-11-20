@@ -1,3 +1,58 @@
+@font-face {
+  font-family: 'GrandSlang-Roman';
+  src: url('./fonts/GrandSlang-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Italic';
+  src: url('./fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: rebeccapurple;
+  font-family:  'GrandSlang-Roman';
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.item-picture {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.item-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.item-description {
+  color: gray;
+  font-size: 1em;
 }
