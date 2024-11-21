@@ -141,47 +141,39 @@ h1 {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  flex-direction: column;;
   margin-bottom: 5%;
   .text {
-    max-width: 50%;
     margin: 0;
-    padding: 10px;
     line-height: 2em;
-    font-size: 1vw;
   }
   .head-image {
     max-width: 50%;
-    min-width: 50%;
     height: auto;
     border-radius: 15px;
     object-fit: cover;
-
   }
+  
 }
 
 .description-right {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 5%;
   position: relative;
   .text {
-    order: 2;
-    max-width: 50%;
     margin: 0;
-    font-size: 1vw;
-    padding: 10px;
     line-height: 2em;
   }
 
   .head-image {
-    min-width: 50%;
     max-width: 50%;
     height: auto;
     object-fit: cover;
     order: 1;
     border-radius: 15px;
-
   }
 }
 
