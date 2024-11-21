@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
@@ -192,11 +191,132 @@ img {
   .title-links-container a {
     font-size: 3.5rem;
   }
-
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
 
+/* General Styles */
+/* Montserrat Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1818;
+  color: #ece7e1;
+}
+a {
+  color: #ece7e1;
+  text-decoration: none;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 2% 19%;
+}
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1818;
+  padding: 10px 20px;
+}
+.nav a {
+  font-size: 12px;
+}
+.nav span {
+  font-size: 12px;
+}
+/* Cards Grid */
+.cards {
+  display: grid;
+  gap: 20px;
+}
+.card {
+  padding: 3%;
+  background-color: #292929;
+  border-radius: 10px;
+  text-align: center;
+  animation: slide-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.card h2 {
+  font-family: "GrandSlang-Roman";
+  font-size: 46px;
+  margin: 0 0 10px 0;
+}
+.card p {
+  font-size: 13px;
+  margin: 5px 0;
+}
+/* Slide Up Animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive Design */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    padding: 20px 10px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2%;
+  }
+  .nav a,
+  .nav span {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .card {
+    width: 280px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .card {
+    width: 380px;
+  }
 }
