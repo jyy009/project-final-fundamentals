@@ -11,12 +11,8 @@ module.exports = {
       template: "./src/template.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "about.html",
-      template: "./src/about.html",
-    }),
-    new HtmlWebpackPlugin({
-      filename: "projects.html",
-      template: "./src/projects.html",
+      filename: 'about.html',
+      template: './src/about.html',
     }),
   ],
   output: {
