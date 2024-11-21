@@ -10,6 +10,10 @@ module.exports = {
       title: "Production",
       template: "./src/template.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: './src/about.html',
+    }),
   ],
   output: {
     filename: "[name].bundle.js",
