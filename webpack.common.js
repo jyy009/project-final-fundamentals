@@ -11,8 +11,17 @@ module.exports = {
       template: "./src/template.html",
     }),
     new HtmlWebpackPlugin({
+<<<<<<< HEAD
       filename: 'about.html',
       template: './src/about.html',
+=======
+      filename: "about.html",
+      template: "./src/about.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "projects.html",
+      template: "./src/projects.html",
+>>>>>>> origin/main
     }),
   ],
   output: {
@@ -43,7 +52,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },

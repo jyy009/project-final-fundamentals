@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "GrandSlang-Roman";
+  src: url("./fonts/GrandSlang-Roman.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Base Styles (Desktop Default) */
+:root {
+  --color-background: rgb(233, 227, 221);
+  --color-text: rgb(26, 24, 24);
+  --color-pink: rgb(239 171 144);
+  --font-title: "GrandSlang-Roman", cursive, sans-serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-body);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  gap: 3%;
+  margin-left: 3%;
+}
+
+nav li {
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--font-body);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: var(--color-pink);
+  text-decoration: underline;
+}
+
+.info-and-title-links-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.logo-and-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--font-body);
+  margin-left: 7%;
+
+  .studio-name {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5em;
+    width: 100%;
+  }
+}
+
+.logo-container {
+  width: 100%;
+  max-width: 80px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 8rem;
+}
+
+.title-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  margin-right: 5%;
+  a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-title);
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 11vw;
+    font-weight: 300;
+    line-height: 0.95em;
+    display: inline-block;
+    transition: transform 0.5s ease;
+  }
+}
+
+.title-links-container a:hover {
+  color: var(--color-pink);
+  font-style: italic;
+  transform: translateX(3px);
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 1%;
+    margin-left: 1%;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+  }
+
+  .info-and-title-links-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .logo-and-info-container {
+    margin-right: 2rem;
+  }
+
+  img {
+    max-width: 50%;
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  .title-links-container {
+    margin-top: -15%;
+    margin-left: 7%;
+  }
+
+  .title-links-container a {
+    font-size: 5rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 1%;
+    padding-left: 2%;
+  }
+
+  nav a {
+    font-size: 0.6rem;
+  }
+
+  .info-and-title-links-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo-and-info-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  img {
+    max-width: 30%;
+    height: auto;
+  }
+
+  .logo-and-info-container .studio-name {
+    font-size: 12px;
+    color: var();
+  }
+
+  .logo-and-info-container p {
+    font-size: 11px;
+    line-height: 1.4em;
+  }
+
+  .title-links-container {
+    height: auto;
+    margin-top: 2rem;
+    margin-right: 5rem;
+  }
+
+  .title-links-container a {
+    font-size: 3.5rem;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* General Styles */
+/* Montserrat Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1818;
+  color: #ece7e1;
+}
+a {
+  color: #ece7e1;
+  text-decoration: none;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 2% 19%;
+}
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1818;
+  padding: 10px 20px;
+}
+.nav a {
+  font-size: 12px;
+}
+.nav span {
+  font-size: 12px;
+}
+/* Cards Grid */
+.cards {
+  display: grid;
+  gap: 20px;
+}
+.card {
+  padding: 3%;
+  background-color: #292929;
+  border-radius: 10px;
+  text-align: center;
+  animation: slide-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.card h2 {
+  font-family: "GrandSlang-Roman";
+  font-size: 46px;
+  margin: 0 0 10px 0;
+}
+.card p {
+  font-size: 13px;
+  margin: 5px 0;
+}
+/* Slide Up Animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive Design */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    padding: 20px 10px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2%;
+  }
+  .nav a,
+  .nav span {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .card {
+    width: 280px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .card {
+    width: 380px;
+  }
+}
