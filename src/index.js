@@ -3,9 +3,12 @@ import "./styles.css";
 
 import { projects } from "./projects";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   projects();
-// });
+ document.addEventListener("DOMContentLoaded", () => {
+  projects();
+ });
 
 import "./aboutstyles.css";
 import "./aboutjs.js";
+
+import "./projects.css";
+import "./projects.js";
