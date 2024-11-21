@@ -1,11 +1,19 @@
 /* General Styles */
-/* Montserrat Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* GrandSlang Roman Font */
+@font-face {
+    font-family: 'GrandSlang-Roman'; /* 自定义字体名称 */
+    src: url('./fonts/GrandSlang-Roman.woff2') format('woff2'), /* 优先使用woff2格式 */
+         url('./fonts/GrandSlang-Roman.ttf') format('truetype'); /* 备用格式 */
+    font-weight: normal; /* 设置字体粗细 */
+    font-style: normal; /* 设置字体样式 */
+}
+/* Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
